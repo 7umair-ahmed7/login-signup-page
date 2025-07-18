@@ -15,16 +15,16 @@ submitBtn.addEventListener("click", (e) => {
 
     }
     if (passwordInput.value.length < 8) {
-        errorPassword = "password must have 8 characters"
+        errorPassword = "password must have atleast 8 characters"
     }
     if (passwordInput.value.length >= 8 && emailInput.value.length > 0 && emailInput.value.includes("@")) {
-        form.innerHTML = "Form successfully submitted"
+      form.innerHTML = `<div class="success-message">Form successfully submitted  <img src="check.svg" width="30" height="30" alt=""> </div>`
     }
 
 
 })
 emailInput.addEventListener("input", (e) => {
-    console.log(e.target.value)
+
     if (emailInput.value.length == 0) {
         errorEmail.innerHTML = "email is required";
     }
@@ -45,7 +45,7 @@ passwordInput.addEventListener("input", () => {
 
     }
     else if (passwordInput.value.length < 8) {
-        errorPassword.innerHTML = "password must have 8 characters"
+        errorPassword.innerHTML = "password must have atleast 8 characters"
     }
     else if (passwordInput.value.length >= 8) {
         errorPassword.innerHTML = ''
